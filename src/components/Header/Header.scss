@@ -12,3 +12,13 @@
 .Header_logo {
   font-weight: 700;
 }
+.ui-button {
+  align-items: center;
+  display: inline-flex;
+  padding: 0.4rem 0.6rem;
+  justify-content: center;
+  color: #1890ff;
+  cursor: pointer;
+  font-size: 100%;
+  border: none;
+}

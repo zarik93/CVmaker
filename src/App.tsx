@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
-import './App.css'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Photo from './components/Main/Photo/Photo'
