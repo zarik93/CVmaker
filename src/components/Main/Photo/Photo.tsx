@@ -43,9 +43,6 @@ const Photo: React.FC<AvatarProps> = ({ isSquare }) => {
     }
   }, [selectedFile])
 
-  //   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //     setSelectedFile(event.target.files[0])
-  //   }
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { files } = event.target
     const selectedFiles = files as FileList

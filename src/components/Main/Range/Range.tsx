@@ -34,7 +34,9 @@ const Range = () => {
   const [value, setValue] = React.useState(90)
   return (
     <Wrapper>
-      <Description>Name - {value}</Description>
+      <Description isPrimary={false} isSecondary={false}>
+        Name - {value}
+      </Description>
       <Input
         type="range"
         min="0"
@@ -48,9 +50,3 @@ const Range = () => {
 }
 
 export default Range
-
-// const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-//     const { files } = event.target
-//     const selectedFiles = files as FileList
-//     setSelectedFile(selectedFiles?.[0])
-//   }

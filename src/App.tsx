@@ -19,8 +19,9 @@ interface ItemsProps {
 
 const Wrapper = styled.div`
   max-width: 1200px;
+  min-height: 1000px;
   margin: 2rem auto;
-  padding: 3rem 2rem;
+  padding: 1rem 2rem 2rem;
   background-color: white;
   border: 1px solid #ececec;
   box-shadow: 5px 7px 10px 4px #ececec;
@@ -36,7 +37,6 @@ const Row = styled.section<ItemsProps>`
 
 const Sidebar = styled.div`
   flex: 1;
-  margin-right: 1rem;
 `
 
 const Content = styled.div`
@@ -63,39 +63,57 @@ const App: React.FC = () => {
                 <Photo isSquare={false} />
               </Sidebar>
               <Content>
-                <Title>Joe Doe</Title>
-                <Description>
-                  Experienced Software & Machine Learning Engineer with a
-                  demonstrated history.
+                <Title
+                  size={1}
+                  isUppercase={false}
+                  isShowButton={false}
+                  onClick={function (): void {}}
+                >
+                  Joe Doe
+                </Title>
+                <Description isPrimary={false} isSecondary={false}>
+                  Experienced Software & Machine Learning Engineer
                 </Description>
               </Content>
             </Row>
 
-            <Row itemsCenter>
+            <Row itemsCenter={false}>
               <Sidebar>
-                <Title size={3} isUppercase>
+                <Title
+                  size={3}
+                  isUppercase
+                  isShowButton={false}
+                  onClick={function (): void {}}
+                >
                   About me:
                 </Title>
-                <Description>Software Engineer</Description>
-                <Description isSecondary>
-                  Lviv, Ukraine | github.com
+                <Description isPrimary={false} isSecondary={false}>
+                  Software Engineer
+                </Description>
+                <Description isSecondary isPrimary={false}>
+                  Lviv, Ukraine | Github
                 </Description>
 
-                <Description isPrimary>
+                <Description isPrimary isSecondary={false}>
                   <MailIcon style={{ marginRight: '0.6rem' }} />
                   joedoe@gmail.com
                 </Description>
-                <Description isPrimary>
+                <Description isPrimary isSecondary={false}>
                   <PhoneIcon style={{ marginRight: '0.6rem' }} />
                   +1 333-6504
                 </Description>
               </Sidebar>
 
               <Content>
-                <Title size={3} isUppercase>
+                <Title
+                  size={3}
+                  isUppercase
+                  isShowButton={false}
+                  onClick={function (): void {}}
+                >
                   Education:
                 </Title>
-                <Description>
+                <Description isPrimary={false} isSecondary={false}>
                   MIT University - BS Software Engineering
                 </Description>
 
@@ -109,7 +127,7 @@ const App: React.FC = () => {
                   Work experience:
                 </Title>
                 {new Array(worksCounter).fill(1).map((_, i) => (
-                  <Description key={i}>
+                  <Description key={i} isPrimary={false} isSecondary={false}>
                     {i + 1}. Solutions Architect, Stripe.
                   </Description>
                 ))}

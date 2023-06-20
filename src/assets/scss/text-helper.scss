@@ -8,6 +8,7 @@
   transition: 0.4s all ease;
   &:focus {
     background-color: #f3f3f3;
+    outline: none;
   }
 }
 

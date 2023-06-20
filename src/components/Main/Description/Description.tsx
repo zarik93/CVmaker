@@ -2,20 +2,20 @@ import React from 'react'
 import classNames from 'classnames'
 
 interface DescriptionProps {
-  isPrimary?: boolean
-  isSecondary?: boolean
-  className?: string
+  isPrimary: boolean
+  isSecondary: boolean
+  //className?: string
   children?: React.ReactNode
 }
 
 const Description: React.FC<DescriptionProps> = ({
   isPrimary,
   isSecondary,
-  className,
+  //className,
   children,
   ...attrs
 }) => {
-  const classes = classNames('ui-text', className, {
+  const classes = classNames('ui-text', {
     isPrimary,
     isSecondary,
   })
@@ -31,12 +31,6 @@ const Description: React.FC<DescriptionProps> = ({
       {children}
     </p>
   )
-}
-
-Description.defaultProps = {
-  isPrimary: false,
-  isSecondary: false,
-  className: '',
 }
 
 export default Description

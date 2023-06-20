@@ -18,11 +18,11 @@ const Wrapper = styled.div`
   }
 `
 interface TitleProps {
-  size?: 1 | 2 | 3 | undefined | null
-  isUppercase?: boolean
-  isShowButton?: boolean
-  className?: string
-  onClick?: () => void
+  size: 1 | 2 | 3
+  isUppercase: boolean
+  isShowButton: boolean
+  //className?: string
+  onClick: () => void
   style?: React.CSSProperties
   children?: React.ReactNode
 }
@@ -31,12 +31,12 @@ const Title: React.FC<TitleProps> = ({
   size,
   isUppercase,
   isShowButton,
-  className,
+  //className,
   onClick,
   children,
   ...attrs
 }) => {
-  const classes = classNames(`ui-title-${size}`, className, { isUppercase })
+  const classes = classNames(`ui-title-${size}`, { isUppercase })
 
   return (
     <Wrapper>
@@ -56,14 +56,6 @@ const Title: React.FC<TitleProps> = ({
       )}
     </Wrapper>
   )
-}
-
-Title.defaultProps = {
-  size: 1,
-  isUppercase: false,
-  isShowButton: false,
-  className: '',
-  onClick: () => {},
 }
 
 export default Title

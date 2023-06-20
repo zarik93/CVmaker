@@ -6,7 +6,7 @@ import './Header.scss'
 import { ReactComponent as PrintIcon } from '../../assets/icons/print.svg'
 
 interface PrintButtonProps {
-  onClick?: () => void
+  onClick: () => void
 }
 
 const Header: React.FC<PrintButtonProps> = ({ onClick }) => {
@@ -24,10 +24,6 @@ const Header: React.FC<PrintButtonProps> = ({ onClick }) => {
     </header>
   )
 }
-
-// Header = {
-//   onClick: func,
-// }
 
 Header.defaultProps = {
   onClick: () => {},
